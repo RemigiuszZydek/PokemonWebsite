@@ -1,10 +1,9 @@
 import React, { useState } from "react";
 
-function SearchPokemon({ onSearch }) {
-	const [searchedPokemon, setSearchedPokemon] = useState("");
+function SearchPokemon({ onSearch, searchValue, onSearchChange }) {
 	const handleSubmit = (e) => {
 		e.preventDefault();
-		onSearch(searchedPokemon);
+		onSearch(searchValue);
 	};
 
 	return (
@@ -12,11 +11,11 @@ function SearchPokemon({ onSearch }) {
 			<form onSubmit={handleSubmit}>
 				<input
 					type="text"
-					value={searchedPokemon}
-					onChange={(e) => setSearchedPokemon(e.target.value)}
-					placeholder="Pokemon name or ID in Pokedex"
+					value={searchValue}
+					onChange={(e) => onSearchChange(e.target.value)}
+					placeholder="Wpisz ID Pokémona"
 				/>
-				<button type="submit">Find</button>
+				<button type="submit">Znajdź</button>
 			</form>
 		</div>
 	);

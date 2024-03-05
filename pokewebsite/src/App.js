@@ -13,7 +13,7 @@ function App() {
 							<Link to="/SearchOneSite">Find Pokemon</Link>
 						</li>
 						<li>
-							<Link to="/Pokedex">1st Gen Pokedex</Link>
+							<Link to="/Pokedex">Pokedex</Link>
 						</li>
 					</ul>
 				</nav>
