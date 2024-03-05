@@ -7,7 +7,7 @@ function SearchPokemon({ onSearch, searchValue, onSearchChange }) {
 	};
 
 	return (
-		<div>
+		<div className="search-container">
 			<form onSubmit={handleSubmit}>
 				<input
 					type="text"
@@ -15,7 +15,9 @@ function SearchPokemon({ onSearch, searchValue, onSearchChange }) {
 					onChange={(e) => onSearchChange(e.target.value)}
 					placeholder="Wpisz ID Pokémona"
 				/>
-				<button type="submit">Znajdź</button>
+				<button className="button" type="submit">
+					Znajdź
+				</button>
 			</form>
 		</div>
 	);

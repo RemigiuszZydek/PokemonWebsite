@@ -68,7 +68,7 @@ function Pokemon() {
 				onSearchChange={handleSearchChange}
 			/>
 			{pokemon && (
-				<div>
+				<div className="pokemon-content">
 					<h1>{pokemon.name}</h1>
 					<img src={pokemon.sprites.front_default} alt={pokemon.name} />
 					<h2>Typy:</h2>
@@ -77,8 +77,12 @@ function Pokemon() {
 							<li key={index}>{typeInfo.type.name}</li>
 						))}
 					</ul>
-					<button onClick={handlePrevious}>Poprzedni</button>
-					<button onClick={handleNext}>Następny</button>
+					<button className="button" onClick={handlePrevious}>
+						Poprzedni
+					</button>
+					<button className="button" onClick={handleNext}>
+						Następny
+					</button>
 				</div>
 			)}
 		</div>
