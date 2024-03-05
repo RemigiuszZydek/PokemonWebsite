@@ -26,7 +26,13 @@ function Pokemon() {
 			{pokemon && (
 				<div>
 					<h1>{pokemon.name}</h1>
-					<img src={pokemon.sprites.front_shiny} alt={pokemon.name} />
+					<img src={pokemon.sprites.front_default} alt={pokemon.name} />
+					<h2>Typy:</h2>
+					<ul>
+						{pokemon.types.map((typeInfo, index) => (
+							<li key={index}>{typeInfo.type.name}</li>
+						))}
+					</ul>
 				</div>
 			)}
 		</div>
