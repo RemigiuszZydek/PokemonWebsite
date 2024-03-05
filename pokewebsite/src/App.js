@@ -1,9 +1,9 @@
 import "./App.css";
-import Pokemon from "./Pokemon.js";
+import SearchOneSite from "./SearchOneSite.js";
 function App() {
 	return (
 		<div className="App">
-			<Pokemon />
+			<SearchOneSite />
 		</div>
 	);
 }
